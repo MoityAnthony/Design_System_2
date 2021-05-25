@@ -1,0 +1,93 @@
+/**
+  RESPONSIVE BREAKPOINTS
+**/
+
+$mobile: 320px;
+$mobile_s: 375px;
+$mobile_m: 420px;
+$mobile_xl: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+$widescreen_xs: 1280px;
+$widescreen: 1400px;
+$widescreen_xl: 1620px;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint=="mobile" {
+    @media (min-width:#{$mobile}) {
+      @content;
+    }
+  }
+  @if $breakpoint=="mobile_s" {
+    @media (min-width:#{$mobile_s}) {
+      @content;
+    }
+  }
+  @if $breakpoint=="mobile_m" {
+    @media (min-width:#{$mobile_m}) {
+      @content;
+    }
+  }
+  @if $breakpoint=="mobile_xl" {
+    @media (min-width:#{$mobile_xl}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="tablet" {
+    @media (min-width:#{$tablet}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="desktop" {
+    @media (min-width: #{$desktop}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="widescreen_xs" {
+    @media (min-width: #{$widescreen_xs}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="widescreen" {
+    @media (min-width: #{$widescreen}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="widescreen_xl" {
+    @media (min-width: #{$widescreen_xl}) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: #{$breakpoint}) {
+      @content;
+    }
+  }
+}
+$browser-context: 16;
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+  //@return #{$pixels}px;
+}
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+  //@return #{$pixels}px;
+}
+@function line($fontSize, $lineHeight) {
+  @return #{$lineHeight/$fontSize}em;
+  //@return #{$lineHeight}px;
+}
+
+@function half($pixels){
+  @return #{$pixels/2}px;
+}
+@function two_third($pixels){
+  @return #{$pixels*(2/3)}px;
+}
+
+@function pourcent($pixel, $width){
+  @return #{ ($pixel/$width)*100}#{'%'};
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
