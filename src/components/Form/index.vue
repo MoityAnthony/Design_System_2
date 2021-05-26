@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <Input />
-    <Button :value='value' />
+    <Button />
   </div>
 </template>
 
@@ -14,9 +14,6 @@ export default {
   components:{
     Input,
     Button,
-  },
-  props:{
-    value: String,
   }
 }
 </script>

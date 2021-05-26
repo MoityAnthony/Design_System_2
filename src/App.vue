@@ -1,32 +1,32 @@
 <template>
-  <div class="main_container">
-    <Connexion />
+  <div id="nav">
+    <router-link :to="{name: 'Home'}">Home</router-link>
+    <router-link :to="{name: 'SignIn'}">Sign In</router-link>
+    <router-link :to="{name: 'SignUp'}">Sign Up</router-link>
   </div>
+  <router-view/>
 </template>
 
-<script>
-import Connexion from './components/Connexion/index.vue';
+<style lang="scss">
+@import './styles/styles.scss';
 
-export default {
-  name: 'App',
-  components:{
-    Connexion,
+#app {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: url('./assets/Ellipse_2.png'), url('./assets/Ellipse_3.png'), url('./assets/Ellipse_4.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 117px 198px, 263px 129px, 15px 20px;
+}
+#nav{
+  a{
+    color: $blue;
+    text-decoration: none;
+    padding: 8px;
+  }
+  a:focus{
+    border-bottom: 1px solid $blue;
   }
 }
-</script>
 
-<style>
-body{
-  padding: 0px;
-  margin: 0px;
-}
-.main_container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0px;
-  font-family: 'Montserrat', 'sans-serif';
-  background: url('./assets/Ellipse_2.png'), url('./assets/Ellipse_3.png'), url('./assets/Ellipse_4.png'); 
-  background-repeat: no-repeat; 
-  background-position: 117px 228px, 263px 129px , 15px 20px;
-}
 </style>

@@ -1,14 +1,27 @@
 <template>
   <div class="container">
-    <button>{{ value }}</button>
+    <button>{{ value() }}</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Button',
-  props:{
-    value: String,
+  methods:{
+    value() {
+      if( this.$route.name == 'SignIn'){
+        return 'Sign in';
+      }
+      else if(this.$route.name == 'SignUp'){
+        return 'Sign up';
+      }
+      else if(this.$route.name == 'Home'){
+        return 'Sign in';
+      }
+      else if(this.$route.name == 'ForgetPassword'){
+        return 'Forget password';
+      }
+    }, 
   }
 }
 </script>

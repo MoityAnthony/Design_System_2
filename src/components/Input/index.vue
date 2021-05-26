@@ -1,25 +1,50 @@
 <template>
   <div class="container">
-    <div class="input_form">
+    <div id="email" class="input_form">
       <label for="email">Email</label>
       <input type="mail" title="email">
     </div>
-    <div class="input_form">
+    <div id="password" class="input_form" :class="isHidden">
       <label for="password">Password</label>
       <input type="password" title="password">
     </div>
-    <a href="#" class="link">Forget password ?</a>
+    <router-link :to="{name: 'ForgetPassword'}" id="link" name="link" :class="forgetPassword">{{ text_link() }}</router-link>
   </div>
+  <router-view/>
 </template>
 
 <script>
 export default {
   name: 'Input',
-  porps:{
-    label: String,
-    link: String,
-    text_link: String,
+  computed:{
+    forgetPassword(){
+      let className = 'visible';
+      if(this.$route.name == 'SignUp'){
+        className = 'hidden';
+        return className;
+      }
+      else if(this.$route.name == 'Home' || this.$route.name == 'SignIn' || this.$route.name == 'ForgetPassword'){
+        className = 'visible';
+        return className;
+      }
+      return className
+    }
+  },
+  methods:{
+    text_link() {
+      if( this.$route.name == 'SignIn' || this.$route.name == 'Home'){
+        return 'Forget password ?';
+      }
+      else if(this.$route.name == 'SignUp'){
+        return 'Sign up';
+      }
+      else if(this.$route.name == 'ForgetPassword'){
+        return 'Remember your password ? Sign in';
+      }
+    }, 
   }
+
+
 }
 </script>
 
@@ -56,5 +81,11 @@ export default {
       font-size: $t-md-size;
       font-weight: $t-md-weight-light;
     }
+  }
+  .hidden{
+    display: none;
+  }
+  .visible{
+    display: block;
   }
 </style>
