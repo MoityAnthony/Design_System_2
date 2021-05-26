@@ -1,20 +1,17 @@
 <template>
   <div class="main_container">
-    <Title title="Sign In" text="Not signed up ?" link_text="Register" />
-    <Form value="Sign In"/>
+    <Connexion />
   </div>
 </template>
 
 <script>
-import Form from './components/Form/index.vue';
-import Title from './components/Title/index.vue';
+import Connexion from './components/Connexion/index.vue';
 
 export default {
   name: 'App',
-  components: {
-    Form,
-    Title,
-  },
+  components:{
+    Connexion,
+  }
 }
 </script>
 
