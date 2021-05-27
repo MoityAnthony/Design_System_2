@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <p class="title" >{{title_text()}}</p>
-    <p>
+    <p class="title t-xl" >{{title_text()}}</p>
+    <p class="t-md-light">
       {{ text }}
-      <router-link :to="link()"><a href='#'>{{ link_text }}</a></router-link>
+      <router-link :to="link()" class="t-md-light">{{ link_text }}</router-link>
     </p>
   </div>
   <router-view />
@@ -59,20 +59,14 @@ export default {
     padding-top: 140px;
     .title{
       color: $grey;
-      font-size: $t-xl-size;
-      font-weight: $t-xl-weight;
       margin: 0px;
     }
     p{
       padding-top: 13px; 
       color: $grey;
-      font-size: $t-md-size;
-      font-weight: $t-md-weight-light;
     }
     a{
       color: $blue;
-      font-size: $t-md-size;
-      font-weight: $t-md-weight-light;
     }
   }
 

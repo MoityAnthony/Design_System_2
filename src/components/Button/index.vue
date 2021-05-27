@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button>{{ value() }}</button>
+    <button class="t-lg">{{ value() }}</button>
   </div>
 </template>
 
@@ -34,8 +34,6 @@ export default {
     text-align: center;
     button{
       background-color: $purple;
-      font-size: $t-lg-size;
-      font-weight: $t-lg-weight;
       color: $pure-white;
       border: none;
       border-radius: 30px;

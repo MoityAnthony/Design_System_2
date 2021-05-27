@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div id="email" class="input_form">
-      <label for="email">Email</label>
-      <input type="mail" title="email">
+      <label class="t-md" for="email">Email</label>
+      <input class="t-md" type="mail" title="email">
     </div>
     <div id="password" class="input_form" :class="isHidden">
-      <label for="password">Password</label>
-      <input type="password" title="password">
+      <label class="t-md" for="password">Password</label>
+      <input class="t-md" type="password" title="password">
     </div>
-    <router-link :to="link()" id="link" name="link" :class="forgetPassword">{{ text_link() }}</router-link>
+    <router-link :to="link()" id="link" name="link" :class="forgetPassword" class="t-md-light">{{ text_link() }}</router-link>
   </div>
   <router-view/>
 </template>
@@ -80,8 +80,6 @@ export default {
       padding-bottom: 24px;
       label{
         color: $grey;
-        font-size: $t-md-size;
-        font-weight: $t-md-weight;
       }
       input{
         border: none;
@@ -95,8 +93,6 @@ export default {
     }
     a{
       color: $blue;
-      font-size: $t-md-size;
-      font-weight: $t-md-weight-light;
     }
   }
   .hidden{
