@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <Title :title="$route.name" text="An email will send to you for restat it" />
     <Form :value="$route.name"/>
   </div>

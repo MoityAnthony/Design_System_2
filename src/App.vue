@@ -1,9 +1,9 @@
 <template>
-  <div id="nav">
+  <nav>
     <router-link :to="{name: 'Home'}">Home</router-link>
     <router-link :to="{name: 'SignIn'}">Sign In</router-link>
     <router-link :to="{name: 'SignUp'}">Sign Up</router-link>
-  </div>
+  </nav>
   <router-view/>
 </template>
 
@@ -27,7 +27,7 @@
     background-position: 267px 228px, 433px 129px, 100px 20px;
   }
 }
-#nav{
+nav{
   a{
     color: $blue;
     text-decoration: none;

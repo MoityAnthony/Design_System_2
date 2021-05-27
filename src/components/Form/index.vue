@@ -1,5 +1,5 @@
 <template>
-  <div class="form">
+  <div>
     <Input />
     <Button />
   </div>

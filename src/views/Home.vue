@@ -1,8 +1,7 @@
 <template>
-  <div class="home">
+  <div>
     <SignIn />
   </div>
-  <router-view />
 </template>
 
 <script>

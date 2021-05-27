@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <Title text="Not signed up ?" link_text="Register" />
     <Form />
   </div>
