@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SignIn from './SignIn.vue';
+import SignIn from './SignIn';
 
 export default {
   name: 'Home',
