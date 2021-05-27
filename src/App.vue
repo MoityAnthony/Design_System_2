@@ -11,12 +11,21 @@
 @import './styles/styles.scss';
 
 #app {
+  width: 300px;
+  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  margin: 0px;
   padding: 0px;
   background: url('./assets/Ellipse_2.png'), url('./assets/Ellipse_3.png'), url('./assets/Ellipse_4.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 117px 198px, 263px 129px, 15px 20px;
+  background-position: 87px 228px, 233px 129px, 0px 20px;
+  @include responsive('tablet'){
+    width: 500px;
+    background-position: 187px 228px, 333px 129px, 50px 20px;
+  }
+  @include responsive('desktop'){
+    width: 650px;
+    background-position: 267px 228px, 433px 129px, 100px 20px;
+  }
 }
 #nav{
   a{
