@@ -7,7 +7,7 @@ $t-md-size: 12px;
 
 $t-xl-weight: 900;
 $t-lg-weight: 700;
-$t-ml-weight: 500;
+$t-ml-weight-light: 500;
 $t-md-weight: 700;
 $t-md-weight-light: 500;
 
@@ -19,9 +19,9 @@ $t-md-weight-light: 500;
   font-size: $t-lg-size;
   font-weight: $t-lg-weight;
 }
-.t-ml{
+.t-ml-light{
   font-size: $t-ml-size;
-  font-weight: $t-ml-weight;
+  font-weight: $t-ml-weight-light;
 }
 .t-md{
   font-size: $t-md-size;

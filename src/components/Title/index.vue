@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <p class="title t-xl" >{{title_text()}}</p>
-    <p class="t-md-light">
+    <p class="t-ml-light">
       {{ text }}
-      <router-link :to="link()" class="t-md-light">{{ link_text }}</router-link>
+      <router-link :to="link()" class="t-ml-light">{{ link_text }}</router-link>
     </p>
   </div>
   <router-view />
