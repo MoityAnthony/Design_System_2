@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button class="t-lg">{{ value() }}</button>
+    <button class="t-lg button">{{ value() }}</button>
   </div>
 </template>
 
@@ -32,12 +32,5 @@ export default {
   .container{
     padding-top: 90px;
     text-align: center;
-    button{
-      background-color: $purple;
-      color: $pure-white;
-      border: none;
-      border-radius: 30px;
-      padding: 5px 31px;
-    }
   }
 </style>

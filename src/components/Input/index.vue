@@ -2,11 +2,11 @@
   <div class="container">
     <div id="email" class="input_form">
       <label class="t-md" for="email">Email</label>
-      <input class="t-md" type="mail" title="email">
+      <input class="t-ml" type="mail" title="email">
     </div>
     <div id="password" class="input_form" :class="isHidden">
       <label class="t-md" for="password">Password</label>
-      <input class="t-md" type="password" title="password">
+      <input class="t-ml" type="password" title="password">
     </div>
     <router-link :to="link()" id="link" name="link" :class="forgetPassword" class="t-md-light">{{ text_link() }}</router-link>
   </div>
