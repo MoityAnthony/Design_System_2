@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title text="Already got an account ?" link_text="Sign in" />
+    <Title text="Already got an account ?" link_text="Sign in now" />
     <Form />
   </div>
 </template>

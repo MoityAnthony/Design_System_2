@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title text="Not signed up ?" link_text="Register" />
+    <Title text="Not signed up yet ?" link_text="Sign up now" />
     <Form />
   </div>
 </template>

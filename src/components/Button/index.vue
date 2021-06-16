@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <router-link :to="link()">
-      <button class="t-lg button">{{ value() }}</button>
+      <button v-on:click="clicked()" id="button" class="t-lg button">{{ value() }} <img src="../../assets/circles-loader-1.png" alt="loader"></button>
     </router-link>
   </div>
   <router-view />
@@ -36,6 +36,12 @@ export default {
         return '';
       }
     }, 
+    clicked() {
+      let button = document.getElementById('button');
+      if( this.$route.name == 'ForgetPassword'){
+        button.classList.add('active');
+      }
+    }
   }
 }
 </script>

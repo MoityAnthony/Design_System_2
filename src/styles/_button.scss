@@ -1,9 +1,44 @@
 $padding: 5px 31px; 
 
 .button{
-  background-color: $purple;
-  color: $pure-white;
-  border: none;
+  background-color: $pure-white;
+  color: $purple;
+  border: 1px solid $purple;
   border-radius: 30px;
   padding: $padding;
+}
+.button:hover{
+  background-color: $purple;
+  color: $pure-white;
+  border: 1px solid $purple;
+}
+.button:active{
+  background-color: $purple-light;
+  color: $pure-white;
+  border: 1px solid $purple-light;
+}
+.active{
+  background-color: $blue !important;
+  border: 1px solid $blue !important;
+  color: $pure-white;
+}
+.button img{
+  display: none !important;
+}
+.active img{
+  display: inline-block !important;
+  vertical-align: bottom;
+  width: 20px;
+  animation: rotateLoader 100s;
+}
+
+@keyframes rotateLoader {
+  from { 
+    -ms-transform: rotate(0deg); 
+    transform: rotate(0deg);
+  }
+  to {  
+    -ms-transform: rotate(10000deg);
+    transform: rotate(10000deg);
+  }
 }

@@ -9,8 +9,8 @@
       <input class="t-md-light" type="password" name="password" title="password">
     </div>
     <div id="password" class="input_form" :class="forgetPassword">
-      <label class="t-md" for="password">Password</label>
-      <input class="t-md-light" type="password" name="password" title="password">
+      <label class="t-md" for="password_confirm">Password</label>
+      <input class="t-md-light" type="password" name="password_confirm" title="password">
     </div>
     <router-link :to="link()" id="link" name="link" :class="forgetEmail" class="t-ml-light">{{ text_link() }}</router-link>
   </div>
