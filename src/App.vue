@@ -28,14 +28,7 @@
   }
 }
 nav{
-  a{
-    color: $blue;
-    text-decoration: none;
-    padding: 8px;
-  }
-  a:focus{
-    border-bottom: 1px solid $blue;
-  }
+  display: none;
 }
 
 </style>
