@@ -28,6 +28,9 @@ export default {
       else if(this.$route.name == 'Home'){
         return 'SignUp';
       }
+      else if(this.$route.name == 'ForgetEmail'){
+        return 'SignIn';
+      }
       else if(this.$route.name == 'ForgetPassword'){
         return 'SignIn';
       }
@@ -42,8 +45,11 @@ export default {
       else if(this.$route.name == 'Home'){
         return 'Sign in';
       }
+      else if(this.$route.name == 'ForgetEmail'){
+        return 'Forgetten password';
+      }
       else if(this.$route.name == 'ForgetPassword'){
-        return 'Forget password';
+        return 'Forgetten password';
       }
     } 
   }

@@ -1,14 +1,18 @@
 <template>
   <div class="container">
-    <div id="email" class="input_form">
+    <div id="email" class="input_form" :class="emailHidden">
       <label class="t-md" for="email">Email</label>
-      <input class="t-md-light" type="mail" title="email">
+      <input class="t-md-light" name="email" type="mail" title="email">
     </div>
-    <div id="password" class="input_form" :class="isHidden">
+    <div id="password" class="input_form" :class="forgetEmailHidden">
       <label class="t-md" for="password">Password</label>
-      <input class="t-md-light" type="password" title="password">
+      <input class="t-md-light" type="password" name="password" title="password">
     </div>
-    <router-link :to="link()" id="link" name="link" :class="forgetPassword" class="t-ml-light">{{ text_link() }}</router-link>
+    <div id="password" class="input_form" :class="forgetPassword">
+      <label class="t-md" for="password">Password</label>
+      <input class="t-md-light" type="password" name="password" title="password">
+    </div>
+    <router-link :to="link()" id="link" name="link" :class="forgetEmail" class="t-ml-light">{{ text_link() }}</router-link>
   </div>
   <router-view/>
 </template>
@@ -17,18 +21,54 @@
 export default {
   name: 'Input',
   computed:{
-    forgetPassword(){
+    forgetEmail(){
       let className = 'visible';
       if(this.$route.name == 'SignUp'){
         className = 'hidden';
         return className;
       }
-      else if(this.$route.name == 'Home' || this.$route.name == 'SignIn' || this.$route.name == 'ForgetPassword'){
+      else if(this.$route.name != 'SignUp'){
         className = 'visible';
         return className;
       }
       return className;
-    }
+    },
+    forgetEmailHidden(){
+      let className = 'visible';
+      if(this.$route.name == 'ForgetEmail'){
+        className = 'hidden';
+        return className;
+      }
+      else if(this.$route.name != 'ForgetEmail'){
+        className = 'visible';
+        return className;
+      }
+      return className;
+    },
+    forgetPassword(){
+    let className = 'visible';
+      if(this.$route.name != 'ForgetPassword'){
+        className = 'hidden';
+        return className;
+      }
+      else if(this.$route.name == 'ForgetPassword'){
+        className = 'visible';
+        return className;
+      }
+      return className;
+    },
+    emailHidden(){
+    let className = 'visible';
+      if(this.$route.name == 'ForgetPassword'){
+        className = 'hidden';
+        return className;
+      }
+      else if(this.$route.name != 'ForgetPassword'){
+        className = 'visible';
+        return className;
+      }
+      return className;
+    },
   },
   methods:{
     text_link() {
@@ -38,13 +78,19 @@ export default {
       else if(this.$route.name == 'SignUp'){
         return 'Sign up';
       }
+      else if(this.$route.name == 'ForgetEmail'){
+        return 'Remember your password ? Sign in';
+      }
       else if(this.$route.name == 'ForgetPassword'){
         return 'Remember your password ? Sign in';
       }
     }, 
     link() {
       if( this.$route.name == 'SignIn' || this.$route.name == 'Home'){
-        return 'ForgetPassword';
+        return 'ForgetEmail';
+      }
+      else if(this.$route.name == 'ForgetEmail'){
+        return 'SignIn';
       }
       else if(this.$route.name == 'ForgetPassword'){
         return 'SignIn';
@@ -97,7 +143,7 @@ export default {
     }
   }
   .hidden{
-    display: none;
+    display: none !important;
   }
   .visible{
     display: block;

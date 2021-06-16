@@ -3,6 +3,8 @@ import Home from '../views/Home'
 import SignIn from '../views/SignIn'
 import SignUp from '../views/SignUp'
 import ForgetPassword from '../views/ForgetPassword'
+import ForgetEmail from '../views/ForgetEmail'
+
 
 const routes = [
   {
@@ -19,6 +21,11 @@ const routes = [
     path: '/signup',
     name: 'SignUp',
     component: SignUp
+  },
+  {
+    path: '/forgetemail',
+    name: 'ForgetEmail',
+    component: ForgetEmail
   },
   {
     path: '/forgetpassword',

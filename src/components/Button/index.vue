@@ -1,7 +1,10 @@
 <template>
   <div class="container">
-    <button class="t-lg button">{{ value() }}</button>
+    <router-link :to="link()">
+      <button class="t-lg button">{{ value() }}</button>
+    </router-link>
   </div>
+  <router-view />
 </template>
 
 <script>
@@ -13,13 +16,24 @@ export default {
         return 'Sign in';
       }
       else if(this.$route.name == 'SignUp'){
-        return 'Sign up';
+        return 'Register';
       }
       else if(this.$route.name == 'Home'){
         return 'Sign in';
       }
+      else if(this.$route.name == 'ForgetEmail'){
+        return 'Send';
+      }
       else if(this.$route.name == 'ForgetPassword'){
-        return 'Forget password';
+        return 'Validate';
+      }
+    },
+    link() {
+      if( this.$route.name == 'ForgetEmail'){
+        return 'ForgetPassword';
+      }
+      else{
+        return '';
       }
     }, 
   }
@@ -32,5 +46,11 @@ export default {
   .container{
     padding-top: 90px;
     text-align: center;
+  }
+  .hidden{
+    display: none !important;
+  }
+  .visible{
+    display: block !important;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title :title="$route.name" text="Please enter your new password" />
+    <Title :title="$route.name" text="An email will send to you for restat it" />
     <Form :value="$route.name"/>
   </div>
 </template>
@@ -10,7 +10,7 @@ import Form from '../components/Form/index.vue';
 import Title from '../components/Title/index.vue';
 
 export default {
-  name: 'ForgetPassword',
+  name: 'ForgetEmail',
   components: {
     Form,
     Title,
